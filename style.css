@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: ghostwhite;
+}
+
+button {
+    background: black;
+    border: 1px solid black;
+    color: white;
+    margin-top: 1rem;
+}
+
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+
+button,
+input[type="number"],
+input[type="submit"] {
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+input[type="number"],
+input[type="submit"] {
+    border: 1px solid darkgrey;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    width: 100px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input[type="submit"],
+.gameContainer {
+    background: white;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.gameContainer {
+    border: 2px solid gainsboro;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    padding: 2rem 2rem 1rem 2rem;
+    width: 540px;
+}
+
+.form {
+    margin-top: 1rem;
+
+    >* {
+        margin-right: 0.5rem;
+    }
+
+    .error p {
+        color: indianred;
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+}
+
+.results {
+
+    margin-top: 1rem;
+
+    .guesses.show,
+    .lastGuess {
+        border: 2px dotted gainsboro;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .lastGuess {
+        background-color: none;
+
+        &.active {
+            background-color: whitesmoke;
+            border: 2px solid gainsboro;
+        }
+
+        &.critical {
+            background-color: mistyrose;
+            border: 2px solid lightcoral;
+        }
+
+        &.success {
+            background-color: honeydew;
+            border: 2px solid darkseagreen;
+        }
+    }
+}
